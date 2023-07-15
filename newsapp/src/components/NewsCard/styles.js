@@ -1,7 +1,7 @@
 import {makeStyles} from '@material-ui/core';
 
 export default makeStyles({
-    media: {
+      media: {
         height: 250,
       },
       border: {
@@ -11,13 +11,15 @@ export default makeStyles({
         height: '100%',
       },
       card: {
+        backgroundColor:'rgb(41, 39, 70)',
+        color:'white',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        borderBottom: '10px solid white',
+        borderBottom: '10px solid rgb(41, 39, 70)',
       },
       activeCard: {
-        borderBottom: '10px solid #22289a',
+        borderBottom: '10px solid white',
       },
       grid: {
         display: 'flex',
@@ -30,9 +32,12 @@ export default makeStyles({
       title: {
         padding: '0 16px',
       },
-      cardActions: {
+      actions: {
         padding: '0 16px 8px 16px',
         display: 'flex',
         justifyContent: 'space-between',
+      },
+      secondary:{
+        color:'rgb(188, 188, 188)',
       },
 });

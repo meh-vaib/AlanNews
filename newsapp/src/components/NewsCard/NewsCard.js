@@ -22,17 +22,17 @@ const NewsCard = ({ article: { description, publishedAt, source, title, url, url
       <CardActionArea>
         <CardMedia className={classes.media} image={urlToImage || 'https://w0.peakpx.com/wallpaper/882/271/HD-wallpaper-good-morning-newspaper-glasses-beautiful-fluid-abstract-coffe-coffee-cup-white-other-blue.jpg'} />
         <div className={classes.details}>
-          <Typography variant="body2" color="textSecondary" component="h2">{(new Date(publishedAt)).toDateString()}</Typography>
-          <Typography variant="body2" color="textSecondary" component="h2">{source.name}</Typography>
+          <Typography className={classes.secondary} variant="body2" color="textSecondary" component="h2">{(new Date(publishedAt)).toDateString()}</Typography>
+          <Typography className={classes.secondary} variant="body2" color="textSecondary" component="h2">{source.name}</Typography>
         </div>
         <Typography className={classes.title} gutterBottom variant="h5">{title}</Typography>
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">{description}</Typography>
+          <Typography className={classes.secondary} variant="body2" color="textSecondary" component="p">{description}</Typography>
         </CardContent>
       </CardActionArea>
       <CardActions className={classes.actions}>
-        <Button  href={url} target="_blank" size="small" color="primary">Learn More</Button>
-        <Typography variant="h5" color="textSecondary">{i + 1}</Typography>
+        <Button className={classes.secondary} href={url} target="_blank" size="small" color="primary">Learn More</Button>
+        <Typography className={classes.secondary} variant="h5" color="textSecondary">{i + 1}</Typography>
       </CardActions>
     </Card>
   )

@@ -18,10 +18,19 @@ const styles = makeStyles({
         color:'white',
     },
     infoCard:{
+        
         display: 'flex',
         flexDirection:'column',
         textAlign:'center',
     },
+    title:{
+        fontFamily:'ubuntu',
+    },
+    matter:{
+        fontFamily:'ubuntu',
+        fontWeight:700,
+        // fontStyle:'italic',
+    }
 });
 
 export default styles;

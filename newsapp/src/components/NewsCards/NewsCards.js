@@ -21,9 +21,9 @@ const NewsCards = ({ articles, activeArticle }) => {
           {infoCards.map((infoCard)=>(
             <Grid item xs={12} sm={6} md={4} lg={3} className={classes.infoCard}>
               <div className={classes.card} style={{backgroundColor: infoCard.color}}>
-                  <Typography variant="h5">{infoCard.title}</Typography>
+                  <Typography className={classes.title} variant="h4">{infoCard.title}</Typography>
                   { infoCard.info?
-                    ( <Typography variant="h7">
+                    ( <Typography className={classes.matter} variant="h7">
                       <strong>
                         {infoCard.title.split(' ')[2]}:
                       </strong>
@@ -32,7 +32,7 @@ const NewsCards = ({ articles, activeArticle }) => {
                     </Typography>
                     ): null
                   }
-                  <Typography variant="h7">Try Saying: <br/> <i>{infoCard.text}</i></Typography>
+                  <Typography variant="h7" className={classes.matter}>Try Saying: <br/> <i>{infoCard.text}</i></Typography>
               </div>
             </Grid>
           ))}
